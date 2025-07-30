@@ -35,6 +35,6 @@
 ## 제출 방식
 
 - 해당 저장소 fork 따기
-- 개인 GitHub 저장소에서 작업 후, `PARADOX-Tech-Course/React-2-` 저장소에 **PR 제출**
+- 개인 GitHub 저장소에서 작업 후, `PARADOX-Tech-Course/React-second-class` 저장소에 **PR 제출**
 - PR 제목: `[2일차] {본인이름} 과제 제출합니다.`
 - 마감: **2025년 7월 31일 (목) 오후 5시 59분까지**
