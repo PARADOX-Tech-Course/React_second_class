@@ -1,17 +1,26 @@
 import React, { useState } from "react";
 import "./App.css";
+import SignIn from './components/SignInModal';
 
 function App() {
   const [signIn, setSignIn] = useState<boolean>(false);
   const [signUp, setSignUp] = useState<boolean>(false);
-  const mainStyle = {
+  const mainStyle: React.CSSProperties = {
     display: "flex",
     gap: "2rem",
   }
+  const openSignInModal = () => {
+    setSignIn(true);
+    setSignUp(false);
+  }
+  const openSignUpModal = () => {
+    setSignUp(true);
+    setSignIn(false);
+  }
   return (
     <main style={mainStyle}>
-      <button>Sign in</button>
-      <button>Sign up</button>
+      <button onClick={openSignInModal}>Sign in</button>
+      <button onClick={openSignUpModal}>Sign up</button>
       {signIn && <SignIn />}
       {signUp && <SignUp />}
     </main>
