@@ -1,11 +1,16 @@
 import Coin from "./component/Coin";
+import Upgrade from "./component/Upgrade";
+import { useState } from "react";
 import "./App.css";
 
 function App() {
-  let power = 1;
+  const [coin, setCoin] = useState(0);
+  const [power, setPower] = useState(1);
+
   return (
     <div>
-      <Coin power={1}/>
+      <Coin coin={coin} setCoin={setCoin} power={power} />
+      <Upgrade coin={coin} setCoin={setCoin} power={power} setPower={setPower} />
     </div>
   );
 }
