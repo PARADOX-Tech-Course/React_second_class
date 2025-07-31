@@ -1,17 +1,38 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
+import { useState, useRef, useEffect } from 'react';
+import CounterDisplay from './CounterDisplay';
+import CounterButtons from './CounterButtons';
+import './index.css';
 
-function App() {
+export default function App() {
   const [count, setCount] = useState(0);
-  const name = "류승찬";
+  const [message, setMessage] = useState('');
+  const plusButtonRef = useRef(null);
+
+  const handleIncrement = () => {
+    setCount((prev) => prev + 1);
+    plusButtonRef.current?.focus();
+  };
+
+  const handleReset = () => {
+    setCount(0);
+    plusButtonRef.current?.focus();
+  };
+
+  useEffect(() => {
+    setMessage(`현재 카운트는 ${count}입니다.`);
+  }, [count]);
 
   return (
-    <>
-      화이팅
-    </>
+    <div className="wrapper">
+      <div className="container">
+        <CounterDisplay message={message} />
+        <CounterButtons
+          count={count}
+          onIncrement={handleIncrement}
+          onReset={handleReset}
+          plusButtonRef={plusButtonRef}
+        />
+      </div>
+    </div>
   );
-}
-
-export default App;
+} 
