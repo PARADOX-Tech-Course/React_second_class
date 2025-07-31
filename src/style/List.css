@@ -2,7 +2,7 @@
   list-style: none;
   margin: 10px;
   background-color: lightgray;
-  padding: 30px;
+  padding: 20px;
   border-radius: 20px;
   width: 250px;
   position: relative;
@@ -13,11 +13,26 @@
 .remove {
   position: absolute;
   height: 30px;
-  right: 15px;
+  right: 10px;
   background-color: red;
   color: white;
   padding: 0px 10px;
   text-align: center;
   line-height: 28px;
-  top: 30px;
+  top: 35px;
+}
+
+.complete {
+  position: absolute;
+  height: 30px;
+  right: 10px;
+  background-color: yellowgreen;
+  padding: 0px 10px;
+  text-align: center;
+  line-height: 28px;
+  top: 5px;
+}
+
+.end {
+  background-color: gray !important;
 }
