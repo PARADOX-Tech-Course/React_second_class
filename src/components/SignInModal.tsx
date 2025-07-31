@@ -10,7 +10,6 @@ const SignInModal: React.FC<SignInModalProps> = ({setSignIn}: SignInModalProps) 
     const [errorMsg, setErrorMsg] = useState<string | null>(null);
     const check = () => {
         if(idRef.current?.value.length as number <= 0) {
-            console.log(idRef.current?.value.length);
             idRef.current?.focus();
             setErrorMsg("id를 입력해주세요.");
             return;
@@ -20,7 +19,7 @@ const SignInModal: React.FC<SignInModalProps> = ({setSignIn}: SignInModalProps) 
             setErrorMsg("password를 입력해주세요.");
             return;
         }
-        alert("성공");
+        alert("SignIn 성공");
         setSignIn(false);
     }
     return (
