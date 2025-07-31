@@ -12,6 +12,7 @@ function App() {
       if(time===0){
         setTime(300);
       }
+      return () => clearInterval(interval);
   }, [time]);
 
   return (
