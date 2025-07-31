@@ -17,9 +17,9 @@
 ┣ 📦components <br/>
 ┃ ┣ 📜[Component1].jsx <br/>
 ┃ ┗ 📜[Component2].jsx <br/>
-┣ 📜App.jsx <br/>
+┣ 📜App.tsx <br/>
 ┣ 📜App.css <br/>
-┣ 📜main.jsx <br/>
+┣ 📜main.tsx <br/>
 
 ## 커밋 컨벤션
 
