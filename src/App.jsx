@@ -1,11 +1,15 @@
 import Coin from "./component/Coin";
 import Upgrade from "./component/Upgrade";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
 
 function App() {
   const [coin, setCoin] = useState(0);
   const [power, setPower] = useState(1);
+
+  useEffect(() => {
+    alert(`Power가 ${power}로 업그레이드 되었습니다!`);
+  }, [power]);
 
   return (
     <div>
