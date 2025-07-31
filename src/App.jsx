@@ -27,7 +27,9 @@ function App() {
     setStart(!start);
   }
   const changeMods = ()=>{
+    setStart(false);
     setMods(!mods);
+    mods?setTime(1500):setTime(300);
   }
 
   return (
