@@ -1,6 +1,6 @@
 function Counter({ setValue }) {
   return (
-    <button onClick={() => setValue(count+1)}>카운트 증가</button>
+    <button onClick={() => setValue(prev => prev + 1)}>카운트 증가</button>
   )
 }
 

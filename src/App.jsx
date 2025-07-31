@@ -18,7 +18,7 @@ function App() {
     <div ref = {divRef}>
       <h1>Hook 과제</h1>
       <Value value={count}/>
-      <Counter count={count} setValue={setCount}/>
+      <Counter setValue={setCount}/>
     </div>
   );
 }
