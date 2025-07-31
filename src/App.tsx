@@ -21,7 +21,7 @@ function App() {
     <main style={mainStyle}>
       <button onClick={openSignInModal}>Sign in</button>
       <button onClick={openSignUpModal}>Sign up</button>
-      {signIn && <SignIn />}
+      {signIn && <SignIn setSignIn={setSignIn} />}
       {signUp && <SignUp />}
     </main>
   );
