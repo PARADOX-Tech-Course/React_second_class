@@ -1,16 +1,20 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import React, { useState } from "react";
 import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0);
-  const name = "류승찬";
-
+  const [signIn, setSignIn] = useState<boolean>(false);
+  const [signUp, setSignUp] = useState<boolean>(false);
+  const mainStyle = {
+    display: "flex",
+    gap: "2rem",
+  }
   return (
-    <>
-      화이팅
-    </>
+    <main style={mainStyle}>
+      <button>Sign in</button>
+      <button>Sign up</button>
+      {signIn && <SignIn />}
+      {signUp && <SignUp />}
+    </main>
   );
 }
 
