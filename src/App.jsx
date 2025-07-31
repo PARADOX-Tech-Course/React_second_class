@@ -9,8 +9,8 @@ function App() {
 
   return (
     <div>
-      <Coin coin={coin} setCoin={setCoin} power={power} />
       <Upgrade coin={coin} setCoin={setCoin} power={power} setPower={setPower} />
+      <Coin coin={coin} setCoin={setCoin} power={power} />
     </div>
   );
 }
