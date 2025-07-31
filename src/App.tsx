@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useEffect, useState} from "react";
 import "./App.css";
 import SignIn from './components/SignInModal';
 import SignUp from './components/SignUpModal';
@@ -10,6 +10,15 @@ function App() {
     display: "flex",
     gap: "2rem",
   }
+  useEffect(() => {
+    const isModalOpen: boolean = signIn || signUp;
+    if (isModalOpen) document.body.style.overflow = "hidden";
+    else document.body.style.overflow = "";
+    return () => {
+      document.body.style.overflow = "";
+    }
+  }, [signIn, signUp])
+
   const openSignInModal = () => {
     setSignIn(true);
     setSignUp(false);
