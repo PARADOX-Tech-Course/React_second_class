@@ -28,8 +28,8 @@ function App() {
   }
   const changeMods = ()=>{
     setStart(false);
+    mods ? setTime(300) : setTime(1500);
     setMods(!mods);
-    mods?setTime(1500):setTime(300);
   }
 
   return (
