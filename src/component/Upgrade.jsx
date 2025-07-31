@@ -11,7 +11,7 @@ export default function Upgrade({ coin, setCoin, power, setPower }) {
   return (
     <div style={{ position: "absolute", left: "42vw", zIndex: 1}}>
       <p>Power: {power}</p> 
-      <button onClick={handleUpgrade}>업그레드 (+1 Power, {10 * power}원 소모)</button>
+      <button onClick={handleUpgrade}>{10 * power}coin으로 power 증가</button>
     </div>
   );
 }
