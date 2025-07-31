@@ -11,7 +11,7 @@ const SignUpModal: React.FC<SignUpModalProps> = ({setSignUp}: SignUpModalProps) 
     const [errorMsg, setErrorMsg] = useState<string | null>(null);
     const check = () => {
         if(nameRef.current?.value.length as number <= 0) {
-            idRef.current?.focus();
+            nameRef.current?.focus();
             setErrorMsg("name를 입력해주세요.");
             return;
         }
