@@ -1,4 +1,6 @@
 import { useState, useRef, useEffect } from "react";
+import Counter from "./components/Counter";
+import Value from "./components/Value";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
@@ -15,6 +17,8 @@ function App() {
   return (
     <div ref = {divRef}>
       <h1>Hook 과제</h1>
+      <Value value={count}/>
+      <Counter count={count} setValue={setCount}/>
     </div>
   );
 }
