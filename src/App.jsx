@@ -2,9 +2,10 @@ import Coin from "./component/Coin";
 import "./App.css";
 
 function App() {
+  let power = 1;
   return (
     <div>
-      <Coin/>
+      <Coin power={1}/>
     </div>
   );
 }
