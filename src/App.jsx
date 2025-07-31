@@ -1,15 +1,41 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import { useState, useEffect } from "react";
 import "./App.css";
+import TimerDisplay from './components/TimerDisplay';
+import TimerControls from './components/TimerControls';
 
 function App() {
-  const [count, setCount] = useState(0);
-  const name = "류승찬";
+  const [start, setStart] = useState(false);
+  const [time, setTime] = useState(1500);
+  const [mods, setMods] = useState(true);
+
+  
+  useEffect(()=>{
+    if(start){
+      const interval = setInterval(()=>{
+        setTime(time=>time-1);
+      }, 1000);
+      if(time===0){
+        setMods(!mods);
+        mods?setTime(1500):setTime(300);
+      }
+      return () => clearInterval(interval);
+    }
+  }, [start, mods]);
+  
+
+  const timerOn = ()=>{
+    setStart(!start);
+  }
+  const changeMods = ()=>{
+    setStart(false);
+    mods ? setTime(300) : setTime(1500);
+    setMods(!mods);
+  }
 
   return (
     <>
-      화이팅
+      <TimerDisplay time={time} />
+      <TimerControls mods={mods} start={start} timerOn={timerOn} changeMods={changeMods} />
     </>
   );
 }
