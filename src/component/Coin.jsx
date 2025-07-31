@@ -12,7 +12,6 @@ export default function Coin({ coin, setCoin, power }) {
     <div ref={div} style={{ position: "absolute", inset: 0 }}>
       <p style={{ fontWeight: 'bolder' }}>{coin}$</p>
       <button onClick={earn}>Earn</button>
-      <p>Power: {power}</p>
     </div>
   );
 }
