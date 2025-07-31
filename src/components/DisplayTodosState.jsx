@@ -4,11 +4,10 @@ import { useState, useEffect } from 'react';
 function DisplayTodosState({ todos }) {
   const [count, setCount] = useState(0);
 
+  // 수정 코드(한번만 계산)
   useEffect(() => {
-    setCount(0);
-    for (const todo of todos) {
-      if (todo.complete === true) setCount(count+1);
-    }
+    const completedCount = todos.filter(todo => todo.complete).length;
+    setCount(completedCount);
   }, [todos]);
   
   return (
