@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 import SignIn from './components/SignInModal';
+import SignUp from './components/SignUpModal';
 
 function App() {
   const [signIn, setSignIn] = useState<boolean>(false);
@@ -22,7 +23,7 @@ function App() {
       <button onClick={openSignInModal}>Sign in</button>
       <button onClick={openSignUpModal}>Sign up</button>
       {signIn && <SignIn setSignIn={setSignIn} />}
-      {signUp && <SignUp />}
+      {signUp && <SignUp setSignUp={setSignUp} />}
     </main>
   );
 }
